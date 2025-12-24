@@ -1,0 +1,85 @@
+{
+  "name": "odinsam-syncvscodesettings",
+  "displayName": "OdinSam Sync VSCode Settings",
+  "description": "Sync VSCode settings.json, keybindings.json, snippets, and extension list to GitHub/Gitee.",
+  "version": "1.0.0",
+  "publisher": "odinsam",
+  "license": "Unlicense",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:syncVsCodeSettings.configure",
+    "onCommand:syncVsCodeSettings.upload",
+    "onCommand:syncVsCodeSettings.download",
+    "onCommand:syncVsCodeSettings.switchProfile",
+    "onCommand:syncVsCodeSettings.statusBarMenu"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "syncVsCodeSettings.configure",
+        "title": "Sync VSCode Settings: Configure (GitHub/Gitee Token)"
+      },
+      {
+        "command": "syncVsCodeSettings.switchProfile",
+        "title": "Sync VSCode Settings: Switch Profile"
+      },
+      {
+        "command": "syncVsCodeSettings.upload",
+        "title": "Sync VSCode Settings: Upload"
+      },
+      {
+        "command": "syncVsCodeSettings.download",
+        "title": "Sync VSCode Settings: Download"
+      },
+      {
+        "command": "syncVsCodeSettings.statusBarMenu",
+        "title": "Sync VSCode Settings: Open Menu"
+      }
+    ],
+    "configuration": {
+      "title": "OdinSam Sync VSCode Settings",
+      "properties": {
+        "syncVsCodeSettings.repoName": {
+          "type": "string",
+          "default": "vscode-settings-sync",
+          "description": "Repository name used to store synced settings."
+        },
+        "syncVsCodeSettings.basePath": {
+          "type": "string",
+          "default": "profiles",
+          "description": "Base directory inside the repo where profiles are stored."
+        },
+        "syncVsCodeSettings.localUserDataDir": {
+          "type": "string",
+          "default": "",
+          "description": "Optional override for VSCode user-data-dir. If empty, the extension will try to infer it from process arguments or OS defaults."
+        },
+        "syncVsCodeSettings.statusBar.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a status bar button for quick actions."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.5",
+    "@vscode/vsce": "^3.6.2"
+  }
+}
+
+

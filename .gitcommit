@@ -1,0 +1,7 @@
+{
+  "projectName": "odinsam-syncvscodesettings",
+  "path": "package.json",
+  "versionRegex": "\"version\"\\s*:\\s*\"([\\d.]+)\"",
+  "description": "项目版本号"
+}
+
