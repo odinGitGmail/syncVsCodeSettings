@@ -1,6 +1,6 @@
 # OdinSam 同步 VSCode 配置（GitHub / Gitee）
 
-[![License](https://img.shields.io/badge/License-Unlicense-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-Unlicense-blue.svg)](https://unlicense.org)
 ![VS Code](https://img.shields.io/badge/VS%20Code-%5E1.85.0-blue)
 ![Version](https://img.shields.io/visual-studio-marketplace/v/odinsam.odinsam-syncvscodesettings)
 [![Author](https://img.shields.io/badge/Author-odinsam-success)](https://www.odinsam.com)

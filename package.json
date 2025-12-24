@@ -5,6 +5,11 @@
   "version": "1.0.0",
   "publisher": "odinsam",
   "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/odinsam/odinsam-syncVsCodeSettings.git"
+  },
+  "homepage": "https://gitee.com/odinsam/odinsam-syncVsCodeSettings",
   "engines": {
     "vscode": "^1.85.0"
   },

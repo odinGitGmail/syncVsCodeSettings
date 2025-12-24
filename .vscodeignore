@@ -4,5 +4,6 @@
 **/*.map
 tsconfig.json
 README.md
+*.vsix
 
 
